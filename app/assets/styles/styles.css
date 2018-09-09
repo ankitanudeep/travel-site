@@ -1,11 +1,2 @@
 @import "modules/_large-hero.css";
-
-body {
-	font-family: 'Roboto', sans-serif;
-	color: #777;
-}
-
-img {
-	max-width: 100%;
-	height: auto;
-}
+@import "base/_global.css"
