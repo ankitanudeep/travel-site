@@ -494,3 +494,23 @@ img {
 	margin-left: auto;
 	margin-right: auto;
 	}
+
+.btn {
+	background-color: #2f5572;
+	color: #FFF;
+	text-decoration: none;
+	/*padding: top&bottom, up&down*/
+	padding: .75rem 1.2rem;
+	display: inline-block;
+}
+
+/*modifier rules*/
+
+.btn--orange {
+		background-color: #d59541;
+	}
+
+.btn--large {
+		font-size: 1.25rem;
+		padding: 1.1rem 1.9rem;
+	}
