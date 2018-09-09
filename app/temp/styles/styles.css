@@ -459,10 +459,9 @@ img {
 
 .large-hero {
 	position: relative;
-
 }
 
-.large-hero .large-hero__text-content {
+.large-hero__text-content {
 	position: absolute;
 	top: 50%;
 	-webkit-transform: translateY(-50%);
@@ -476,10 +475,10 @@ img {
 	font-weight: 300;
 	color: #2f5572;
 	font-size: 4.8rem;
-}
+	}
 
 .large-hero__subtitle {
 	font-weight: 300;
 	color: #2f5572;
 	font-size: 2.9rem;
-}
+	}
