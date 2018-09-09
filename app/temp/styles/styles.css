@@ -1,3 +1,7 @@
+.large-hero {
+	position: relative;
+}
+
 body {
 	font-family: 'Roboto', sans-serif;
 	color: #777;

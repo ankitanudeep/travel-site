@@ -4,6 +4,7 @@ var postcss = require('gulp-postcss');
 var autoprefixer = require('autoprefixer');
 var cssvars = require('postcss-simple-vars');
 var nested = require('postcss-nested');
+var cssImport = require('postcss-import');
 
 gulp.task('default', function(){
 	console.log("Hooray - you created a gulp class");
@@ -23,7 +24,7 @@ gulp.task('styles', function(){
 	/*we can give 2 arguments as well,.pipe(postcss([cssvars, autoprefixer]))*/
 	
 	/*nested is used to create nested classes*/
-	.pipe(postcss([cssvars, nested, autoprefixer]))
+	.pipe(postcss([cssImport, cssvars, nested, autoprefixer]))
 	.pipe(gulp.dest('./app/temp/styles'));
 	
 });
