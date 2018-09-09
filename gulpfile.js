@@ -10,7 +10,8 @@ gulp.task('html', function(){
 });
 
 gulp.task('styles', function(){
-	console.log("Imagine SaaS or PostSaaS files running here.");
+	/*move the contents of css file from point styles.css to dest place using pipe*/
+	return gulp.src('./app/assets/styles/styles.css').pipe(gulp.dest('./app/temp/styles'));
 });
 
 gulp.task('watch', function(){
