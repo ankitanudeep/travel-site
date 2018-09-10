@@ -5,13 +5,14 @@ var autoprefixer = require('autoprefixer');
 var cssvars = require('postcss-simple-vars');
 var nested = require('postcss-nested');
 var cssImport = require('postcss-import');
+var browsersync = require('browser-sync').create();
 
 gulp.task('default', function(){
 	console.log("Hooray - you created a gulp class");
 });
 
 gulp.task('html', function(){
-	console.log("Imagine something useful being done to your HTML file here.");
+	browsersync.reload();
 });
 
 gulp.task('styles', function(){
@@ -30,6 +31,14 @@ gulp.task('styles', function(){
 });
 
 gulp.task('watch', function(){
+	
+	browsersync.init({
+		server: {
+			baseDir: "app"
+		}
+			
+	});
+	
 	watch('./app/index.html', function(){
 		gulp.start('html')
 	});
