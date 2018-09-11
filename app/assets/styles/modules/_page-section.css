@@ -1,6 +1,11 @@
 /*This file will have the responsibility of adding top-padding and bottom-padding to the page*/
 .page-section {
-	padding: 4.5rem 0;
+	padding: 1.2rem 0;
+	
+	@mixin atMedium {
+		padding: 4.5rem 0;
+	}
+	
 	
 	&--blue {
 		background-color: $mainBlue;

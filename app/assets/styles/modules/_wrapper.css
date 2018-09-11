@@ -6,4 +6,19 @@
 	/*this will make the contents horizontally centered*/
 	margin-left: auto;
 	margin-right: auto;
+	
+	&--medium {
+		max-width: 976px;
+	}
+	
+	/*the image "our-start.jpg" in index.html looked disaligned from the top image
+	first-trip.jpg, as the first image was put in a div tag*/
+	/*to avoid this disalignment, we define a nested wrapper and say. a wrapped 
+	inside another wrapper with have 0 padding*/
+	/*why nested ?
+	The first image is inside the nested wrapper, and following the above common property of the wrapper class, hence below we are overriding those property*/
+	.wrapper {
+		padding-left: 0px;
+		padding-right: 0px;
+	}
 }
