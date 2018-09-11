@@ -1,4 +1,9 @@
 .wrapper {
 	padding-left: 18px;
 	padding-right: 18px;
+	
+	max-width: 1200px;
+	/*this will make the contents horizontally centered*/
+	margin-left: auto;
+	margin-right: auto;
 }

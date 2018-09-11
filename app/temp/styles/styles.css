@@ -557,4 +557,20 @@ img {
 .wrapper {
 	padding-left: 18px;
 	padding-right: 18px;
+	
+	max-width: 1200px;
+	/*this will make the contents horizontally centered*/
+	margin-left: auto;
+	margin-right: auto;
 }
+
+/*This file will have the responsibility of adding top-padding and bottom-padding to the page*/
+
+.page-section {
+	padding: 4.5rem 0;
+}
+
+.page-section--blue {
+		background-color: #2f5572;
+		color: #FFF;
+	}

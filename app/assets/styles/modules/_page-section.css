@@ -1,0 +1,9 @@
+/*This file will have the responsibility of adding top-padding and bottom-padding to the page*/
+.page-section {
+	padding: 4.5rem 0;
+	
+	&--blue {
+		background-color: $mainBlue;
+		color: #FFF;
+	}
+}
