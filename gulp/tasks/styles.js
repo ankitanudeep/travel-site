@@ -4,6 +4,7 @@ var autoprefixer = require('autoprefixer');
 var cssvars = require('postcss-simple-vars');
 var nested = require('postcss-nested');
 var cssImport = require('postcss-import');
+var mixins = require('postcss-mixins');
 
 gulp.task('styles', function(){
 	/*move the contents of css file from point styles.css to dest place using pipe*/
@@ -15,7 +16,7 @@ gulp.task('styles', function(){
 	/*we can give 2 arguments as well,.pipe(postcss([cssvars, autoprefixer]))*/
 	
 	/*nested is used to create nested classes*/
-	.pipe(postcss([cssImport, cssvars, nested, autoprefixer]))
+	.pipe(postcss([cssImport, mixins, cssvars, nested, autoprefixer]))
 	.on('error', function(errorInfo) {
 		console.log(errorInfo.toString());
 		this.emit('end');
