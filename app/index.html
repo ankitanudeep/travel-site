@@ -23,6 +23,7 @@
   </header>
 
   <div class="large-hero">
+    <!--Adding responsive image: Use it only when you want to switch images-->
 	<picture>
 		<source srcset="assets/images/hero--large.jpg 1920w, assets/images/hero--large-hi-dpi.jpg 3840w" media="(min-width: 1380px)">
 		<source srcset="assets/images/hero--medium.jpg 1380w, assets/images/hero--medium-hi-dpi.jpg 2760w" media="(min-width: 990px)">
@@ -43,14 +44,24 @@
 	  <div class="wrapper">
 		<h2 class="headline headline--centered headline--light headline--b-margin-small">The first road trip we planned <strong>was our own.</strong></h2>
 		<h3 class="headline headline--centered headline--orange headline--small headline--narrow headline--light headline--b-margin-large">Ever since, we&rsquo;ve been working to make travel <strong>better for everyone.</strong></h3>
-		<div class="wrapper wrapper--medium">
-			<img src="assets/images/first-trip.jpg" alt="Couple walking down a street.">
+		<div class="wrapper wrapper--medium wrapper--b-margin">
+			<!--use this when we need to just switch the image resolution, not the image itself-->
+			<!--if we keep sizes="976px", then even for smaller screens the image of width 976px will be loaded-->
+			<!--so let's write a media query for sizes. VW: Viewport Window-->
+			<img sizes="(min-width: 970px) 976px, 100vw" srcset="assets/images/first-trip-low-res.jpg 565w, assets/images/first-trip.jpg 976w, assets/images/first-trip-hi-dpi.jpg 1952w" alt="Couple walking down a street.">
 		</div>
 		<div class="row row--gutters">
-			<div class="row__medium-4">
-				<img src="assets/images/our-start.jpg" alt="Our founder, Jane Doe">
+			<div class="row__medium-4 row__medium-4--larger">
+			<!--Adding responsive image: Use it only when you want to switch images-->
+			<picture>
+				<!-- This is a column layout, hence we need to provide the actual width of the image, otherwise the 
+				HTML page will consider the full width of the row, and display the hi-dpi image always, #-25-->
+				<source sizes="404px" srcset="assets/images/our-start.jpg 404w, assets/images/our-start-hi-dpi.jpg 808w" media="(min-width: 1020px)">
+				<source sizes= "382px" srcset="assets/images/our-start-portrait.jpg 382w, assets/images/our-start-portrait-hi-dpi.jpg 764w" media="(min-width: 800px)">
+				<img srcset="assets/images/our-start-landscape.jpg 800w, assets/images/our-start-landscape-hi-dpi.jpg 1600w" alt="Our founder, Jane Doe">
+			</picture>
 			</div>
-			<div class="row__medium-8">
+			<div class="row__medium-8 row__medium-8--smaller">
 				<h2 class="headline">Here&rsquo;s how we got started&hellip;</h2>
 				<div class ="row__justifyText">
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <a href="#">quis nostrud exercitation</a> ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>

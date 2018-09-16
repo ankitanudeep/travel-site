@@ -1,3 +1,9 @@
+/*
+* How to calculate rem in css?
+* we can assume that browsers use 16px as default
+* 40px is equal to 40/16 = 2.5rem
+*/
+
 .large-hero {
 	border-bottom: 10px solid $mainBlue;
 	position: relative;

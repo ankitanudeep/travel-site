@@ -458,10 +458,17 @@ img {
 }
 
 * {
+  /*This property is defined for all the CSS classes which includes _global.css*/
   box-sizing: border-box;
 }
 
 /*The sequence of import is very very important*/
+
+/*
+* How to calculate rem in css?
+* we can assume that browsers use 16px as default
+* 40px is equal to 40/16 = 2.5rem
+*/
 
 .large-hero {
 	border-bottom: 10px solid #2f5572;
@@ -566,15 +573,13 @@ img {
 	padding-left: 18px;
 	padding-right: 18px;
 	//background-color: green;
-	max-width: 1200px;
+	max-width: 1236px;
 	/*this will make the contents horizontally centered*/
 	margin-left: auto;
 	margin-right: auto;
 	
 	/*the image "our-start.jpg" in index.html looked disaligned from the top image
 	first-trip.jpg, as the first image was put in a div tag*/
-	/*to avoid this disalignment, we define a nested wrapper and say. a wrapped 
-	inside another wrapper with have 0 padding*/
 }
 
 .wrapper--medium {
@@ -587,6 +592,22 @@ img {
 .wrapper .wrapper {
     	padding-left: 0;
     	padding-right: 0;
+	}
+
+/*to avoid this disalignment, we define a nested wrapper and say. a wrapped 
+	inside another wrapper with have 0 padding*/
+
+.wrapper--b-margin {
+		margin-bottom: 1rem;
+		
+	}
+
+@media (min-width: 800px) {
+
+.wrapper--b-margin {
+			margin-bottom: 3.875rem
+		
+	}
 	}
 
 /*This file will have the responsibility of adding top-padding and bottom-padding to the page*/
@@ -650,6 +671,7 @@ img {
 	}
 
 .headline--b-margin-small {
+		/*https://www.sitepoint.com/power-em-units-css/*/
 		margin-bottom: .5em;
 	}
 
@@ -682,15 +704,24 @@ img {
 	}
 
 @media (min-width: 800px) {
-		.row__medium-4 {
+		
+	.row__medium-4 {
 		float:left;
 		width: 33.33%;
-	}
+		}
 	
+	.row__medium-4--larger {
+		width: 37%;
+		}
+		
 	.row__medium-8 {
 		float: left;
 		width: 66.66%;
-	}
+		}
+	
+	.row__medium-8--smaller {
+		width: 63%;
+		}
 	}
 
 .row__justifyText {

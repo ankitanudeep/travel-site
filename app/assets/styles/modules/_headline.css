@@ -34,6 +34,7 @@
 	}
 	
 	&--b-margin-small {
+		/*https://www.sitepoint.com/power-em-units-css/*/
 		margin-bottom: .5em;
 	}
 	

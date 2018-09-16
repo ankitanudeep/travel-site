@@ -9,5 +9,6 @@ img {
 }
 
 * {
+  /*This property is defined for all the CSS classes which includes _global.css*/
   box-sizing: border-box;
 }
