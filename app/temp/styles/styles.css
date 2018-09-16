@@ -462,6 +462,11 @@ img {
   box-sizing: border-box;
 }
 
+a {
+	/*color for all the links*/
+	color: #d59541;
+}
+
 /*The sequence of import is very very important*/
 
 /*
@@ -679,6 +684,10 @@ img {
 		margin-bottom: 1.6em;
 	}
 
+.headline--no-t-margin {
+		margin-top: 0;
+	}
+
 .row {
 	//background-color: yellow;
 }
@@ -703,7 +712,15 @@ img {
 		padding-right: 65px;
 	}
 
+.row__b-margin-until-medium {
+    margin-bottom: 1rem;
+  }
+
 @media (min-width: 800px) {
+		
+	.row__b-margin-until-medium {
+      margin-bottom: 0;
+    }
 		
 	.row__medium-4 {
 		float:left;
@@ -726,4 +743,23 @@ img {
 
 .row__justifyText {
 		text-align:justify;
+	}
+
+.generic-content-container p {
+		line-height: 1.65;
+		
+		/*margin between paragraphs - vertical, horizontal*/
+		margin: 1.8rem 0;
+	}
+
+@media (min-width: 800px) {
+
+.generic-content-container p {
+			font-size: 1.125rem
+	}
+	}
+
+.generic-content-container p a {
+		/*any hyperlink inside the paragraphs*/
+		font-weight: 700;
 	}
