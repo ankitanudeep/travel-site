@@ -1,9 +1,11 @@
 @import "normalize.css";
 @import "base/_global";
 @import "base/_variables";
+/*The sequence of import is very very important*/
+@import "base/_mixins";
 @import "modules/_large-hero";
 @import "modules/_btn";
-@import "base/_mixins";
 @import "modules/_wrapper";
 @import "modules/_page-section";
 @import "modules/_headline";
+@import "modules/_row";

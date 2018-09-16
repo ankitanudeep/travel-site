@@ -1,0 +1,33 @@
+.row {
+
+	@mixin clearfix;
+	//background-color: yellow;
+	&--gutters {
+		margin-right: -65px;
+	}
+	
+	&--gutters > div {
+		/*This will break the column layout calculation as the whole width goes beyond 100%*/
+		/*33.33% + 66.66% + (65*2 divs) = 99.99% + 130px > 100%*/
+		/*To avoid this, we need to add box-sizing: border-box. We can add this property in this file, 
+		or it is better to add for "ALL files" in _global.css*/
+		padding-right: 65px;
+	}
+	
+	@mixin atMedium {
+		&__medium-4 {
+		float:left;
+		width: 33.33%;
+	}
+	
+	&__medium-8 {
+		float: left;
+		width: 66.66%;
+	}
+	}
+	
+	
+	&__justifyText {
+		text-align:justify;
+	}
+}

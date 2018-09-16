@@ -15,3 +15,12 @@
 		@mixin-content;
 	}
 }
+
+@define-mixin clearfix{
+	/*This css selector will add a blank space after all of the content in the main row div*/
+	&::after {
+		content: "";
+		clear: both;
+		display: table;
+	}
+}

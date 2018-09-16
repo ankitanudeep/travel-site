@@ -457,6 +457,12 @@ img {
 	height: auto;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+/*The sequence of import is very very important*/
+
 .large-hero {
 	border-bottom: 10px solid #2f5572;
 	position: relative;
@@ -555,9 +561,11 @@ img {
 	}
 
 .wrapper {
+	/*The overflow property specifies what should happen if content overflows an element's box.*/
+	overflow: hidden; /*scroll, auto, visible*/
 	padding-left: 18px;
 	padding-right: 18px;
-	
+	//background-color: green;
 	max-width: 1200px;
 	/*this will make the contents horizontally centered*/
 	margin-left: auto;
@@ -577,8 +585,8 @@ img {
 	The first image is inside the nested wrapper, and following the above common property of the wrapper class, hence below we are overriding those property*/
 
 .wrapper .wrapper {
-		padding-left: 0px;
-		padding-right: 0px;
+    	padding-left: 0;
+    	padding-right: 0;
 	}
 
 /*This file will have the responsibility of adding top-padding and bottom-padding to the page*/
@@ -647,4 +655,44 @@ img {
 
 .headline--b-margin-large {
 		margin-bottom: 1.6em;
+	}
+
+.row {
+	//background-color: yellow;
+}
+
+/*This css selector will add a blank space after all of the content in the main row div*/
+
+.row::after {
+		content: "";
+		clear: both;
+		display: table;
+	}
+
+.row--gutters {
+		margin-right: -65px;
+	}
+
+.row--gutters > div {
+		/*This will break the column layout calculation as the whole width goes beyond 100%*/
+		/*33.33% + 66.66% + (65*2 divs) = 99.99% + 130px > 100%*/
+		/*To avoid this, we need to add box-sizing: border-box. We can add this property in this file, 
+		or it is better to add for "ALL files" in _global.css*/
+		padding-right: 65px;
+	}
+
+@media (min-width: 800px) {
+		.row__medium-4 {
+		float:left;
+		width: 33.33%;
+	}
+	
+	.row__medium-8 {
+		float: left;
+		width: 66.66%;
+	}
+	}
+
+.row__justifyText {
+		text-align:justify;
 	}

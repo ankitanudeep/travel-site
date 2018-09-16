@@ -1,7 +1,9 @@
 .wrapper {
+	/*The overflow property specifies what should happen if content overflows an element's box.*/
+	overflow: hidden; /*scroll, auto, visible*/
 	padding-left: 18px;
 	padding-right: 18px;
-	
+	//background-color: green;
 	max-width: 1200px;
 	/*this will make the contents horizontally centered*/
 	margin-left: auto;
@@ -18,7 +20,7 @@
 	/*why nested ?
 	The first image is inside the nested wrapper, and following the above common property of the wrapper class, hence below we are overriding those property*/
 	.wrapper {
-		padding-left: 0px;
-		padding-right: 0px;
+    	padding-left: 0;
+    	padding-right: 0;
 	}
 }
