@@ -73,4 +73,18 @@
 	&--t--padding {
 		padding-top: 80px;
 	}
+	
+	&--equal-height-at-medium {
+		
+		@mixin atMedium {
+			//background-color: yellow;
+			/*using flexbox for equal height of testimonials*/
+			display: flex;
+		}
+		
+		& > div {
+			float: none;
+			display: flex;
+		}
+	}
 }

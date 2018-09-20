@@ -582,9 +582,6 @@ a {
 	/*this will make the contents horizontally centered*/
 	margin-left: auto;
 	margin-right: auto;
-	
-	/*the image "our-start.jpg" in index.html looked disaligned from the top image
-	first-trip.jpg, as the first image was put in a div tag*/
 }
 
 .wrapper--medium {
@@ -615,11 +612,30 @@ a {
 	}
 	}
 
+/*the image "our-start.jpg" in index.html looked disaligned from the top image
+	first-trip.jpg, as the first image was put in a div tag*/
+
+.wrapper--no-padding-until-medium {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+@media (min-width: 800px) {
+
+.wrapper--no-padding-until-medium {
+			padding-left: 18px;
+			padding-right: 18px
+	}
+	}
+
 /*This file will have the responsibility of adding top-padding and bottom-padding to the page*/
 
 .page-section {
 	padding: 1.2rem 0;
+	//background-color: yellow;
 }
+
+/*to see the yellow, comment 'background-color: #e0e6ef;'*/
 
 @media (min-width: 800px) {
 
@@ -634,8 +650,27 @@ a {
 	}
 
 .page-section--testimonials {
-		background: url('/assets/images/testimonials-bg.jpg') top center no-repeat;
-		background-size: cover;
+		background-color: #e0e6ef;
+	}
+
+@media (min-width: 800px) {
+
+.page-section--testimonials {
+			/*Download bg image only for medium screens onward, not for small screens*/
+			background: url('/assets/images/testimonials-bg.jpg') top center no-repeat;
+			background-size: cover
+	}
+	}
+
+.page-section--no-b-padding-until-medium {
+		padding-bottom: 0;
+	}
+
+@media (min-width: 800px) {
+
+.page-section--no-b-padding-until-medium {
+		padding: 4.5rem 0
+	}
 	}
 
 .headline {
@@ -775,6 +810,20 @@ a {
 		padding-top: 80px;
 	}
 
+@media (min-width: 800px) {
+
+.row--equal-height-at-medium {
+			//background-color: yellow;
+			/*using flexbox for equal height of testimonials*/
+			display: flex
+	}
+	}
+
+.row--equal-height-at-medium > div {
+			float: none;
+			display: flex;
+		}
+
 .generic-content-container p {
 		line-height: 1.65;
 		font-weight: 300;
@@ -880,9 +929,23 @@ a {
 .testimonial {
 	
 	/*top right bottom left*/
-	padding: 0 1.8125rem 1px 1.8125rem;
+	padding: 0 18px 1px 18px;
 	background-color: rgba(255,255,255,.8);
+	//background-color: yellow;
+	margin-bottom: 98px;
 }
+
+@media (min-width: 800px) {
+
+.testimonial {
+		margin-bottom: 0;
+		padding: 0 1.8125rem 1px 1.8125rem
+}
+	}
+
+.testimonial--last{
+		margin-bottom: 0;
+	}
 
 .testimonial__photo {
 		//background-color: yellow;
