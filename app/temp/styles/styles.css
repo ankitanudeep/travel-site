@@ -628,6 +628,19 @@ a {
 	}
 	}
 
+.wrapper--no-padding-until-large {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+@media (min-width: 1010px) {
+
+.wrapper--no-padding-until-large {
+			padding-left: 18px;
+			padding-right: 18px
+	}
+	}
+
 /*This file will have the responsibility of adding top-padding and bottom-padding to the page*/
 
 .page-section {
@@ -653,7 +666,7 @@ a {
 		background-color: #e0e6ef;
 	}
 
-@media (min-width: 800px) {
+@media (min-width: 1010px) {
 
 .page-section--testimonials {
 			/*Download bg image only for medium screens onward, not for small screens*/
@@ -669,6 +682,17 @@ a {
 @media (min-width: 800px) {
 
 .page-section--no-b-padding-until-medium {
+		padding: 4.5rem 0
+	}
+	}
+
+.page-section--no-b-padding-until-large {
+		padding-bottom: 0;
+	}
+
+@media (min-width: 1010px) {
+
+.page-section--no-b-padding-until-large {
 		padding: 4.5rem 0
 	}
 	}
@@ -802,6 +826,36 @@ a {
 	}
 	}
 
+@media (min-width: 1010px) {
+		
+	.row__b-margin-until-large {
+      margin-bottom: 0;
+    }
+		
+	.row__large-4 {
+		float:left;
+		width: 33.33%;
+		}
+	
+	.row__large-4--larger {
+		width: 37%;
+		}
+		
+	.row__large-8 {
+		float: left;
+		width: 66.66%;
+		}
+	
+	.row__large-8--smaller {
+		width: 63%;
+		}
+		
+	.row__large-6 {
+		float:left;
+		width:50%;
+	}
+	}
+
 .row__justifyText {
 		text-align:justify;
 	}
@@ -820,6 +874,20 @@ a {
 	}
 
 .row--equal-height-at-medium > div {
+			float: none;
+			display: flex;
+		}
+
+@media (min-width: 1010px) {
+
+.row--equal-height-at-large {
+			//background-color: yellow;
+			/*using flexbox for equal height of testimonials*/
+			display: flex
+	}
+	}
+
+.row--equal-height-at-large > div {
 			float: none;
 			display: flex;
 		}
@@ -935,7 +1003,7 @@ a {
 	margin-bottom: 98px;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 1010px) {
 
 .testimonial {
 		margin-bottom: 0;
