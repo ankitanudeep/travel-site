@@ -19,6 +19,8 @@
 		margin-bottom: .6rem;
 		
 		@mixin atSmall {
+			position: relative;
+			top: 8px;
 			margin-left: 0;
 			margin-right: .5rem;
 			display: inline-block;

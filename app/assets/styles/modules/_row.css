@@ -22,6 +22,15 @@
 		padding-right: 100px;
 	}
 	
+	&--gutters--small {
+		margin-right: -45px;
+	}
+	
+	&--gutters--small > div {
+		padding-right: 45px;
+	}
+	
+	
 	&__b-margin-until-medium {
     margin-bottom: 1rem;
   }
@@ -59,5 +68,9 @@
 	
 	&__justifyText {
 		text-align:justify;
+	}
+	
+	&--t--padding {
+		padding-top: 80px;
 	}
 }
