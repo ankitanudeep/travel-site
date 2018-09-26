@@ -1,9 +1,15 @@
+/*Do not edit/modify modules/_sprite.css file directly as it is generated automaticallyby gulp. Instead edit gulp/templates/sprite*/
+
 {{#shapes}}
+	{{#first}}
+	.icon {
+	/*The generated sprite will be read*/
+	background-image: url('/assets/images/sprites/{{{sprite}}}');
+	}
+	{{/first}}
 	.icon--{{base}} {
 		width: {{width.outer}}px ;
 		height: {{height.outer}}px;
-		/*The generated sprite will be read*/
-		background-image: url('/temp/sprite/css/{{{sprite}}}');
 		background-position: {{position.relative.xy}};
 	}
 {{/shapes}}
