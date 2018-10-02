@@ -1,5 +1,5 @@
 var Person = require('./modules/Person');
-alert("Refresh");
+//alert("Refresh");
 var john = new Person("John", "blue");
 john.greet();
 
